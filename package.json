@@ -1,0 +1,23 @@
+{
+  "name": "guiguzhipin-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2213397919/guiguzhipin-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2213397919/guiguzhipin-server/issues"
+  },
+  "homepage": "https://github.com/2213397919/guiguzhipin-server#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  }
+}
