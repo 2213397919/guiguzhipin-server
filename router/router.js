@@ -5,7 +5,7 @@ const router = new express.Router();
 
 //解析请求体参数。
 router.use(express.urlencoded({extends:true}))
-//注册
+//注册路由
 router.post('/register',async (req,res)=>{
     const {username,password,type} = req.body;
     try {
@@ -34,6 +34,7 @@ router.post('/register',async (req,res)=>{
         })
     }
 })
+//登录路由
 router.post('/login',async (req,res)=>{
     //从请求体参数里读取值
     const {username,password} = req.body;
