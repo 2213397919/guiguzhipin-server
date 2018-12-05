@@ -18,6 +18,7 @@
   "homepage": "https://github.com/2213397919/guiguzhipin-server#readme",
   "dependencies": {
     "blueimp-md5": "^2.10.0",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.14"
   }

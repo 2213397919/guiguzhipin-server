@@ -13,7 +13,12 @@ const usersSchema = new mongoose.Schema({
     type :{
         type: String,
         required: true,
-    }
+    },
+    header: String,
+    post :String,
+    company :String,
+    salary:String,
+    info:String
 
 });
 module.exports = mongoose.model('users',usersSchema);
