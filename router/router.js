@@ -136,4 +136,16 @@ router.get('/user', (req, res) => {
             res.send({code: 1, msg: '获取用户异常, 请重新尝试'})
         })
 })
+// 获取用户列表(根据类型)
+router.get('/userList', (req, res) => {
+    const {type} = req.query
+    Users.find({type}, {__v: 0, password: 0})
+        .then(users => {
+            res.send({code: 0, data: users})
+        })
+        .catch(error => {
+            console.error('获取用户列表异常', error)
+            res.send({code: 1, msg: '获取用户列表异常, 请重新尝试'})
+        })
+})
 module.exports = router;
