@@ -6,7 +6,7 @@ const app = express();
 
 const http = require('http');
 const server = http.createServer(app);
-require('./socket/socket_io')(server)
+require('./socket/index')(server)
 server.listen('5000', () => {
     console.log('socketio服务器启动成功, 请访问: http://localhost:5000')
 });
