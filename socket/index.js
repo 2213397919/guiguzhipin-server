@@ -16,6 +16,7 @@ module.exports = function (server) {
             const from_to = [from, to].sort().join('-');
             //保存在数据库中
             const result = await Messages.create({from, to, message, from_to})
+            console.log(result);
             // 向所有客户端发送消息(名称, 数据)
             io.emit('receiveMsg', result);
             // 向当前客户端发送消息(名称, 数据)
