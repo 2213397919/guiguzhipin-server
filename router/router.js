@@ -182,4 +182,19 @@ router.get('/msglist', (req, res) => {
             res.send({code: 1, msg: '获取消息列表异常, 请重新尝试'})
         })
 })
+router.post('/readmsg',(req,res)=>{
+//    得到请求中的from和to
+    const from = req.body.from;
+    const to =  req.cookies.userid;
+    Messages.update({from,to,read:false},{$set:{read:true}},{multi:true})
+        .then(doc=>{
+            console.log('/readmsg',doc);
+            //更新的数量
+            res.send({code:0,data:doc.nModified})
+        })
+        .catch(error=>{
+            console.log("查看消息列表异常",error);
+            res.send({code:1,msg:"网络异常，请重新试试"})
+        })
+})
 module.exports = router;

@@ -1,5 +1,4 @@
 const Messages = require('../modles/message');
-
 module.exports = function (server) {
     //server 服务器对象
     // 得到IO对象，
